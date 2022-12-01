@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let runAgain = true;
+
+        while (runAgain) {
+            let a = prompt("Enter Your age");
+            a = Number.parseInt(a);
+            const canDrive = (age) => {
+                return age >= 18 ? true : false;
+            }
+            if (a < 0) {
+                console.error("Please enter a valid age");
+                break;
+            }
+            if (canDrive(a)) {
+                alert("You can drive");
+            }
+            else {
+                alert("You cannot drive");
+            }
+            runAgain = confirm("Can we do more");
+            console.log(runAgain);
+        }
+
+    </script>
+</body>
+
+</html>

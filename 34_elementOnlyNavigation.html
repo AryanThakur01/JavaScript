@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element Only Navigation</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            border-bottom: 2px solid gray;
+        }
+        nav ul li{
+            margin: 10px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body><!-- This is a random comment -->
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Review</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <p>Hey I am a good boy</p>
+    </div>
+    <script>
+        let b = document.body
+        console.log("First child of b is", b.firstChild)            //This return the first child of the body
+        console.log("First child of b is", b.firstElementChild)     //this return the first element child of the body
+
+        const changeBgRed = ()=>{
+            document.body.firstElementChild.style.background = "red";
+        }
+        
+        /**
+         * document.previousElementSibling => previous sibling which is an element
+         * document.nextElementSibling => next sibling which is an element
+         * document.firstElementChild => first element child
+         */
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML</title>
+</head>
+
+<body>
+    Hello World
+    <span id="first" hidden><b>HI</b> Hey I am span</span>
+
+
+
+
+
+    <script defer>
+        //  console.log(document.getElementsByTagName('span')[0];
+        //  console.dir(document.getElementsByTagName('span')[0];   => this prints as an object with it's properties
+
+
+        let x = document.getElementsByTagName('span')[0];
+        console.log(x);
+        let y = document.getElementsByTagName('span')[0];
+        console.dir(y);
+        console.log(document.body.firstChild.nodeName);
+        console.log(document.body.firstElementChild.nodeName);
+
+
+
+        // first.innerHTML;
+        // first.innerHTML = "<i>I am italic</i>";
+        // first.outerHTML;
+        // first.outerHTML = "<div>Hey There You random Person</div>";
+
+        // document.body.firstChild.data;
+        // document.body.firstChild.nodeValue;
+
+
+        // document.body.firstChild.data;
+        // console.log(document.body.textContent);
+
+        // first.hidden = false;
+        
+
+    </script>
+</body>
+
+</html>

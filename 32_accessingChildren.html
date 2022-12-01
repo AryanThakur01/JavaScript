@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing children</title>
+</head>
+
+<!-- Remember that first child has a text node -->
+
+<body>
+    <div>
+        <p>This is me and I am great</p>
+        <span>I am sibling of p tag</span>
+    </div>
+    <!-- 
+        Remember that there is a text node just after a node
+
+        Directly as well as deeply rested elements of an element are called its children
+
+        CHILD NODES: Element that are direct children for exmaple head and body are children of <html>
+
+        DESCANDANT NODES: All nested elements, children, this children and so on.....
+     -->
+
+    <script>
+        console.log(document.body.firstChild);
+        console.log(document.body.lastChild);
+        let arr = Array.from(document.body.childNodes);
+        console.log(arr);
+        // elem.childNodes -> accesses all the childs
+        // elem.fitstChild -> accesses the first children
+        // elem.lastChild -> accesses the last children
+
+        // elem.childNodes[0] === elem.firstChild
+    </script>
+</body>
+
+</html>
