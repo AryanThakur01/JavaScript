@@ -8,19 +8,19 @@ const { readFile, writeFile } = require('fs').promises;
 console.log('start');
 const start = async () => {
     try {
-        // for (let index = 0; index < 50; index++) {
-        //     console.log(index);
+        for (let index = 0; index < 50; index++) {
+            console.log(index);
 
-        // }
+        }
 
         const first = await readFile('./content/first.txt', 'utf-8');
         const second = await readFile('./content/second.txt', 'utf-8');
         await writeFile('./content/result-mind-grenade.txt', `THIS IS AWESOME: ${first} ${second}`, {flag: 'a'});
         
-        // for (let index = 50; index < 101; index++) {
-        //     console.log(index);
+        for (let index = 50; index < 101; index++) {
+            console.log(index);
 
-        // }
+        }
         console.log(first, second);
     }
     catch (error) {

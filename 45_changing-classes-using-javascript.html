@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .yellow {
+            background-color: yellow;
+            color: red;
+        }
+
+        .red {
+            background-color: red;
+            color: yellow;
+        }
+
+        .text-dark {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first" class="yellow text-dark">
+        <span>Hey I am good</span>
+    </div>
+
+    <script defer>
+        first = document.getElementById('first');
+        // first.className = "text-black red";
+        // first.classList.add("<class>");
+        // first.classList.remove("<class>");
+        // first.classList.toggle('<class>');
+        // first.classList.contains('<class>');
+    </script>
+</body>
+
+</html>
