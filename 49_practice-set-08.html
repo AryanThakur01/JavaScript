@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bulb {
+            background: radial-gradient(yellow, orange);
+            border-radius: 50%;
+            box-shadow: 0px 0px 50px orange;
+        }
+
+        .bulb-container {
+            height: 341px;
+            width: 341px;
+            display: flexbox;
+        }
+
+        button {
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button onclick="alert('Please give me one plate of chowmein');">Chowmein</button>
+    <button onclick="alert('Please give me one plate of vada pow');">Pao</button>
+    <button onclick="alert('Please give me one plate of vada wow');">wow</button>
+
+
+    <h1>Bookmarks</h1>
+    <button id="google">GOOGLE</button>
+    <a href="https://twitter.com"><button id="twitter">TWITTER</button></a>
+    <a href="https://facebook.com"><button id="facebook">FACEBOOK</button></a> -->
+
+
+    <div class="bulb bulb-container">
+
+    </div>
+    <button>Switch</button>
+
+    <script>
+        // document.getElementById('google').addEventListener('click', function () {
+        //     window.location = "https://www.google.com/";
+        //     win.focus();
+        //     console.log('listenint');
+        // })
+
+
+        // setInterval(async function () {
+        //     document.querySelector(".bulb-container").classList.toggle("bulb");
+        // }, 500)
+        let button = document.getElementsByTagName('button')[0];
+
+        button.addEventListener('click', () => {
+            document.querySelector(".bulb-container").classList.toggle("bulb");
+        })
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>handlingEvents</title>
+</head>
+<div>
+    <button id="btn">Click Me</button>
+</div>
+
+<body>
+    <script>
+        // <element>.addEventListener(event, handler);
+        // <element>.removeEventListener(event, handler)
+        // Every function object is different in a funciton callback
+
+        let btn = document.getElementById('btn');
+        let x = function (event) {
+            console.log(event.target);
+            console.log(event.type, event.clientX, event.clientY);
+            // alert("Hello world!1");
+        }
+        // let y = function () {
+        //     alert("Hello world!2");
+        // }
+
+        btn.addEventListener('click', x);
+        // btn.addEventListener('click', y)
+
+        // let a = prompt("What is your favourite number?");
+        // if (a == "2") {
+        //     btn.removeEventListener('click', y);
+        // }
+
+    </script>
+</body>
+
+</html>

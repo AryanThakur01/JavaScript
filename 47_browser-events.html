@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <div class="container" style="background-color: orange;" onclick="console.log('container me mouse gaya')">
+        <button onclick="console.log('hello'); let t = 6; console.log(t);">CLICK</button>
+    </div>
+    <div class="container"></div>
+    <script>
+        let a = document.getElementsByClassName('container')[0];
+        b = document.getElementsByClassName('container')[1];
+        a.onclick = () => {
+            b.innerHTML = 'Hello World!';
+        }
+    </script>
+</body>
+
+</html>
