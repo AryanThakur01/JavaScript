@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOCK</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .clockContainer {
+            background: linear-gradient(-45deg, rgb(97, 63, 151), rgba(0, 255, 0, 0.548), rgba(0, 0, 255, 0.349));
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        .time {
+            margin: 2px;
+            color: rgba(0, 0, 255, 0.836);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 130px;
+            width: 130px;
+            font-size: 60px;
+            border-radius: 3px;
+            transition: all 0.5s linear;
+            transform-style: preserve-3d;
+            cursor: default;
+            transform: rotate3d(1, 10, 0, 40deg);
+        }
+
+        .time:nth-child(4) {
+            align-items: flex-end;
+            justify-content: flex-start;
+            border: 0px;
+        }
+
+        .milSec {
+            font-size: 20px;
+            height: 70px;
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+        }
+
+        .displaingContainers {
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            border-left: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.308), inset 1px 1px 2px rgba(255, 255, 255, 0.205);
+            text-shadow: 1px 1px 5px white;
+            backdrop-filter: blur(100px);
+        }
+
+        .time:hover {
+            transform: rotate3d(1, 5, 1, 0deg);
+        }
+
+        .displaingContainers:hover.displaingContainers::before,
+        .displaingContainers:hover.displaingContainers::after {
+            content: "";
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 50px;
+            width: 40px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<div class="clockContainer">
+    <div class="displaingContainers time hr">
+        <span class="floatingGlass"></span> <span class="floatingGlass"></span>
+        12
+    </div>
+    <div class="displaingContainers time min">
+        <span class="floatingGlass"></span> <span class="floatingGlass"></span>
+        12
+    </div>
+    <div class="displaingContainers time sec">
+        <span class="floatingGlass"></span> <span class="floatingGlass"></span>
+        12
+    </div>
+    <div class="time">
+        <span class="floatingGlass"></span> <span class="floatingGlass"></span>
+        <span class="displaingContainers milSec">12</span>
+    </div>
+</div>
+
+<body>
+    <script>
+        setInterval(() => {
+            d = new Date();
+            document.querySelector('.hr').innerHTML = d.getHours();
+            document.querySelector('.min').innerHTML = d.getMinutes();
+            document.querySelector('.sec').innerHTML = d.getSeconds();
+            document.querySelector('.milSec').innerHTML = d.getMilliseconds();
+        }, 100);
+    </script>
+</body>
+
+</html>

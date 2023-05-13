@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        /* background-color: black; */
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+        position: absolute;
+        z-index: 9999;
+        width: 100%;
+    }
+
+    .navigation-menu {
+        display: flex;
+        list-style: none;
+    }
+
+    .navigation-menu li {
+        margin: 10px;
+    }
+
+    .navigation-menu li a {
+        display: block;
+        text-decoration: none;
+        padding-inline: 25px;
+        padding-block: 3px;
+        border: 2px solid transparent;
+        color: rgb(87, 85, 85);
+        transition: all 0.2s ease;
+        border-radius: 7px;
+    }
+
+    .navigation-menu li a:hover {
+        background-color: rgba(128, 128, 128, 0.534);
+        color: white;
+        border-bottom: 2px solid rgba(0, 255, 255, 0.767);
+    }
+
+    section {
+        background-color: black;
+        height: 500px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input[type='button'] {
+        padding-block: 5px;
+        padding-inline: 20px;
+        cursor: pointer;
+        background-color: wheat;
+    }
+
+    input[type='button']:hover {
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul class="navigation-menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="container">
+        <input type="button" value="Question 1" onclick="firstElementRed()" onmousedown="colorGreen()" class="but">
+    </section>
+
+    <section style="background-color: gray;">
+        <table>
+            <td>Hello</td>
+            <tr>Hello 1</tr>
+            <tr>Hello 2</tr>
+            <tr>Hello 3</tr>
+            <tr>Hello 4</tr>
+        </table>
+    </section>
+
+    <section style="color: white;">
+        <div>This is the first element</div>
+        <div>This is the second element</div>
+        <div>This is the third element</div>
+    </section>
+
+    <script>
+        firstElementRed = () => {
+            const navFirstElement = document.querySelector('.active');
+            navFirstElement.style.color = 'red';
+            navFirstElement.style.fontWeight = 'bold';
+        }
+        colorGreen = () => {
+            console.log('hel')
+            const button = document.body.querySelector('.but');
+            // console.log(button)
+            button.style.color = 'blue';
+            button.style.fontWeight = 'bold';
+            button.style.fontSize = '30px';
+        }
+        const Q3 = document.body.getElementsByTagName('section')
+        Q3[2].firstElementChild.style.color = 'orange';
+        Q3[2].lastElementChild.style.color = 'lightgreen';
+
+
+        const li = document.body.getElementsByTagName('li');
+        l = li.length
+        for (let index = 0; index < l; index++) {
+            li[index].style.backgroundColor = 'cyan';
+            li[index].style.opacity = '0.5'
+            li[index].style.boxShadow = '2px 2px 2px white, inset 3px 3px 5px white'
+            li[index].style.borderRadius = '5px'
+        }
+    </script>
+</body>
+
+</html>

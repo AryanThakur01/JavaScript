@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <h1 class="addTheScript"></h1>
+    <script>
+        // let a = prompt("What is your name");
+        // let b = prompt("What is your age?");
+        // let c = prompt("What is your favurite color");
+        // console.log(a + " is " + b + " yaers old and has " + c + " favorite color.");
+
+        // // Asynchronous programming
+        // connsole.log("Start");
+        // setTimeout(function () {
+        //     console.log("Hey I am good");
+        // }, 3000);
+        // console.log("End");
+
+        // Callbacks
+        function loadScript(src, callback) {
+            var script = document.createElement("script");
+            script.src = src;
+            script.onload = function(){
+                document.body.firstElementChild.innerHTML = `${src}`
+                console.log("loaded script with src: " + src);
+                callback(null, src);
+            }
+            script.onerror = function(){
+                document.body.firstElementChild.innerHTML = `Error loading the script`
+                console.log("Error loading script with SRC: ", src)
+                callback(new Error("Src got some error"));
+            }
+            document.body.append(script);
+        }
+        function hello(error, src){
+            if(error){
+                console.log(error);
+                return;
+            }
+            alert('hello world!'+ src);
+        }
+        function goodmorning(error, src){
+            if(error){
+                console.log(error);
+                return;
+            }
+            alert('Good morning!'+ src);
+        }
+        loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js", goodmorning);
+    </script>
+</body>
+
+</html>

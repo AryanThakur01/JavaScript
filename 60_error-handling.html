@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(() => {
+            console.log("Hacking wifi.... please wait....")
+        }, 1000);
+
+        try{
+            setTimeout(()=>{
+                    console.log(Rahul); // this error will not be handled by the try catch, to handle this error, write the try catch in setTimeout
+            }, 100)
+            console.log(Rahul);
+        }
+        catch(error){
+            console.error("Balle balle");
+        }
+
+        setTimeout(() => {
+            console.log("Fetching username and password... Please wait...");
+        }, 2000);
+        setTimeout(() => {
+            console.log("Hacking Rahul's facebook id... Please wait...");
+        }, 3000);
+        setTimeout(() => {
+            console.log("Username and password of Rahul(+91 1234273525) fetched... Please wait...");
+        }, 4000);
+    </script>
+</body>
+
+</html>

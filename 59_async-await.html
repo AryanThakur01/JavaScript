@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function harry() {
+
+            let delhiWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("27 Deg")
+                }, 1000);
+            })
+
+            let bangloreWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("20 Deg")
+                }, 6000);
+            })
+
+            // delhiWeather.then(alert);
+            // bangloreWeather.then(alert);
+
+            console.log("Fetching Delhi weather, please wait...")
+            let delhiW = await delhiWeather
+            console.log("Delhi weather has been fetched", delhiW)
+
+            console.log("Fetching Banglore weather, please wait...")
+            let bangloreW = await bangloreWeather
+            console.log("Banglore weather has been fetched", bangloreW)
+            return [delhiW, bangloreW];
+        }
+        const main1 = async () => {
+            const cherry = () => {
+                console.log("Hey I am cherry and I am waiting")
+            }
+            let a = await harry();
+            let b = await cherry();
+        }
+        main1();
+    </script>
+</body>
+
+</html>
